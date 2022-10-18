@@ -12,9 +12,15 @@ print(guess)
 
 
 # 1 If the number the user said is less than 1 or greater than 100, it will tell them that  he/she has chosen a number that is out of play.
-tries = 0
+count = 0
 for guess in secretNumber(count):
-  tries 
+  if guess != secretNumber:
+    count = count + 1
+  elif count == 8:
+    print("You lose! Better luck next time.")
+    
+          
+    
   
   
 
