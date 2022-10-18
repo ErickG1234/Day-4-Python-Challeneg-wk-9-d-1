@@ -40,21 +40,21 @@ else:
 # 2 If the number the user chose is less than the number the program thought of, it will tell them that the answer is wrong, and that he/she chose a lower number than the secret number.
 
     
-if guess is => secretNumber:
+if guess >= secretNumber:
   print("Your guess is higher than the number I've thought of")
 
   
 # 3 If the user chose a number greater than the secret number, it will let them know that it was greater.
 
   
-if guess is <= secretNumber:
+if guess >= secretNumber:
   print("Your guess is higher than the number I've thought of")
 
   
 # 4 And if the user got the secret number right, they will be informed that they have won,and how many tries that has taken them.
 
   
-if guess is == secretNumber:
+if guess == secretNumber:
   print("You got it right! Congradulations")
 
 
