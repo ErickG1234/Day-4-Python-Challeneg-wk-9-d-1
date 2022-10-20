@@ -1,8 +1,17 @@
 # The task is this: the program will ask for the user's name and then it will say
 from random import randint
-import math
+def eight_tries():
+  for i in secretNumber:
+    if count > 8:
+      print("You lose! Better luck next time.")
+
+def keep_going():
+  if count < 9:
+    guess
+
 count = 0
-secretNumber = randint(1, 101)
+secretNumber = range(randint(1, 101))
+# secretNumber = list(secretNumber)
 name = input("What is your name? ")
 print(name)
 
@@ -15,33 +24,32 @@ print("You guessed: " + str(integer_guess))
 # 1 If the number the user said is less than 1 or greater than 100, it will tell them that  he/she has chosen a number that is out of play.
 if integer_guess < 1 or integer_guess > 100:
   print("Out of play")
+  count = 0
 
-for guess in secretNumber:
-  if integer_guess != secretNumber:
+for secret in secretNumber:
+  if integer_guess != secret:
     count = count + 1
-  elif count > 8:
-    print("You lose! Better luck next time.")
-  else: 
-    print("You lose") 
+    keep_going()
+    
+  # elif count > 8:
+  #   print("You lose! Better luck next time.")
 
-if integer_guess >= secretNumber():
+
+if integer_guess >= secret:
   print("Your guess is higher than the number I've thought of")
-else:
+if integer_guess <= secret:
   print("Your guess is smaller than the number I've thought of")
-
+if integer_guess == secret:
+  print("You got it!!!")
 # 2 If the number the user chose is less than the number the program thought of, it will tell them that the answer is wrong, and that he/she chose a lower number than the secret number.
 
-if integer_guess >= secretNumber:
-  print("Your guess is higher than the number I've thought of")
+
 
 # 3 If the user chose a number greater than the secret number, it will let them know that it was greater.
 
-if integer_guess >= secretNumber:
-  print("Your guess is higher than the number I've thought of")
+
 
 # 4 And if the user got the secret number right, they will be informed that they have won,and how many tries that has taken them.
 
-if integer_guess == secretNumber:
-  print("You got it right! Congratulations")
 
 # 5 If the user has not guessed correctly in their first attempt, they will be asked again to choose another number and so on until they win or until their eight attempts are done.
